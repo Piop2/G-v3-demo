@@ -17,7 +17,7 @@ class MusicPlayer:
                 self._queue.put(item)
 
             elif isinstance(item, Album):
-                for music in Album.music_list:
+                for music in item.music_list:
                     self._queue.put(music)
 
             else:
