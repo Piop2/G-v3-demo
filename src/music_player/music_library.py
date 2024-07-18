@@ -1,5 +1,6 @@
 import os
 from io import BytesIO
+from typing import Self
 
 import eyed3
 import pygame
@@ -17,7 +18,7 @@ class MusicLibrary:
     def music(self) -> list[Music]:
         return self._music
 
-    def load_music(self) -> None:
+    def load_music(self) -> Self:
         music_list: list[Music] = []
         album_dict: dict[str:Album] = {}
         artist_dict: dict[str:Artist] = {}
@@ -64,3 +65,5 @@ class MusicLibrary:
             album.music_list.append(music)
             music_list.append(music)
         self._music = tuple(music_list)
+
+        return self

@@ -11,7 +11,7 @@ class MusicPlayer:
         self._current_playing: Optional[Music] = None
         self._queue: Queue[Music] = Queue()
 
-    def queue_music(self, *music_or_albums: Music | Album):
+    def queue_music(self, *music_or_albums: Music | Album) -> None:
         for item in music_or_albums:
             if isinstance(item, Music):
                 self._queue.put(item)
