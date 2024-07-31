@@ -1,1 +1,1 @@
-# Gesture Speaker DEMO
+# G v3 DEMO
